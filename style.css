@@ -1,0 +1,61 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+body {
+  min-height: 100vh;
+  background: linear-gradient(to bottom, #020101af 0%, #b8b6b6 80%);
+}
+.navbar {
+  background: #3e414e;
+}
+.content {
+  border: #f8f2f0 2px solid;
+  border-radius: 5px;
+  padding: 1px;
+  min-height: 300px;
+  margin-top: 80px;
+}
+table {
+  max-width: 1260px;
+}
+.overflow {
+  max-height: 300px;
+  overflow-y: scroll;
+  /* border-radius: 20px 20px 20px 20px; */
+}
+.footer h3 {
+  position: absolute;
+  left: 50px;
+}
+.footer button {
+  margin-left: 1021px;
+}
+/* Class added When the table is empty */
+.footer.emptyTable {
+  margin-top: 110px;
+}
+.alert {
+  margin: 1.5rem 32rem;
+  height: 1rem;
+  width: 20rem;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  font-size: 0.7rem;
+  /* border-radius: 2rem; */
+  letter-spacing: 0.25rem;
+  text-transform: capitalize;
+}
+.alert.danger {
+  color: rgb(247, 1, 50);
+  background: rgb(255, 215, 215);
+}
+.alert.success {
+  color: rgb(55, 131, 40);
+  background: rgb(215, 255, 224);
+}
+
+/* remove and add edit btn */

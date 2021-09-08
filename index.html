@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Todo-App</title>
+<!-- css -->
+<link rel="stylesheet" href="style.css">
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.6.0/dist/css/bootstrap.min.css">
+<script src="https://code.jquery.com/jquery-3.5.1.min.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@4.6.0/dist/js/bootstrap.bundle.min.js"></script>
+</head>
+<body>
+
+<div class="nav-bar">
+    <nav class="navbar navbar-expand-md navbar-dark">
+        <a href="index.html" class="navbar-brand p-4"><h2><strong>CRUD Todo-App</strong></h2></a>
+        <button type="button" class="navbar-toggler" data-toggle="collapse" data-target="#navbarCollapse">
+            <span class="navbar-toggler-icon"></span>
+        </button>
+
+        <div class="collapse navbar-collapse" id="navbarCollapse">
+            <form class="form-inline ml-auto">
+                <input type="text" class="form-control mr-sm-2 rounded-pill searchField" placeholder="Search">
+                <!-- <button type="submit" class="btn btn-outline-light rounded-pill">Search</button> -->
+            </form>
+        </div>
+    </nav>
+</div>
+
+<p class="alert rounded-pill"></p>
+
+<div class="todo-body m-4 bg-light content" id="addTask">
+    <form action="#" class="form-inline m-4 ">
+        <input type="text" class="input-group form-control col-10 rounded-pill" placeholder="Add task" id="inputField">
+        <input type="hidden" class="input-group form-control col-10 bg-dark " placeholder="Add todo" id="addBtn">
+        <button class="btn btn-primary m-2 col-1 addBtn rounded-pill" >Add</button>
+        <!-- <button class="btn btn-primary col-1 editBtn">Edit</button>  --> <!-- remove when not editing -->
+    </form>
+    <div class="overflow m-4">
+        <table class="table table-success table-striped table-hover">
+            <tbody class="tableList">
+                
+                <!-- <tr>
+                    <th scope="row">#1</th>
+                    <td><h3>Going to school</h3></td>
+                    <td class="float-right">
+                        <button class="btn btn-info rounded-pill" style="width: 90px;">Edit</button>
+                        <button class="btn btn-danger rounded-pill deleteSingle" style="width: 90px;">Delete</button>
+                    </td>
+                </tr> -->
+                
+                
+            </tbody>
+        </table>
+    </div>
+    <div class="footer ">
+        <h3 class="">You have <span class="numLeft"></span> pending task</h3>
+        <button class="btn btn-danger col-1 rounded-pill clear-all">Delete All</button>
+    </div>
+</div>
+<!-- JS -->
+<script src="main.js"></script>
+</body>
+</html>
