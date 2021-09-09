@@ -153,7 +153,7 @@ deleteAll.addEventListener('click', function(){
     showTask() // refresh and display what is in local storage 
 })
 
-// Search 
+// Search for values
 const searchItem = document.querySelector('.searchField')
 searchItem.addEventListener('input', function(){
     let trList = document.querySelectorAll('tr')
