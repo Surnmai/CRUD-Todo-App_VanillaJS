@@ -167,6 +167,7 @@ searchItem.addEventListener('input', function(){
         }
         else{
             item.style.display = 'none'
+            // searchItem.value = 'Match not found'
         }
     })
 })
