@@ -24,11 +24,12 @@ addTask.addEventListener('submit', function(e){
         listArray.push(inputField.value)
         localStorage.setItem('Task List', JSON.stringify(listArray))
         // console.log('Ohk It works');
+        displayAlert("Task Added", "success")
         showTask()
         refreshPage() //Refresh page upon submit button fired
     }
     else if (inputField.value.trim() !== '' && editSet) {
-        console.log('Hello edit will work');
+        // console.log('Hello edit will work');
         //Assing input field value to local storage corresponding index 
 
         // console.log(index);
@@ -41,6 +42,7 @@ addTask.addEventListener('submit', function(e){
         // console.log(JSON.parse(localStorage.getItem('Task List')))
         // console.log(JSON.parse(localStorage.getItem('Task List')[index]))
         localStorage.setItem('Task List', JSON.stringify(listArray))
+        displayAlert("Task Edited", "success")
         showTask()
         refreshPage() //Refresh page upon submit button fired
     }
@@ -138,7 +140,7 @@ edit.forEach(function(item){
          index = e.currentTarget.dataset.id //Grabing the id of data-id
         // inputField.value.trim() = JSON.parse(localStorage.getItem('Task List'))[index] // Passing the value index of the storage to the input field
         editSet = true
-
+        
     })
 })
 
