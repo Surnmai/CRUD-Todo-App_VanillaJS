@@ -114,6 +114,7 @@ del.forEach(function(item){
         listArray.splice(index, 1)
         localStorage.setItem('Task List',JSON.stringify(listArray))
         // showTask()
+        displayAlert("Task Deleted", "danger")
         refreshPage() //Refresh the page 
     })
 })
@@ -150,6 +151,7 @@ deleteAll.addEventListener('click', function(){
     localStorage.setItem('Task List', JSON.stringify(listArray))
     const footer = document.querySelector('.footer')
     footer.classList.add('emptyTable')
+    displayAlert("Task Cleared", "danger")
     showTask() // refresh and display what is in local storage 
 })
 
@@ -167,6 +169,7 @@ searchItem.addEventListener('input', function(){
         }
         else{
             item.style.display = 'none'
+            // displayAlert("Match not found", "success")
             // searchItem.value = 'Match not found'
         }
     })
