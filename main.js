@@ -95,7 +95,7 @@ function displayAlert(text, color){
     setTimeout(function(){
         alertNote.classList.remove(color)
         alertNote.textContent = ''
-    },2000)
+    },3000)
 }
 
 //Refresh page function
