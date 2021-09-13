@@ -24,9 +24,9 @@ addTask.addEventListener('submit', function(e){
         listArray.push(inputField.value)
         localStorage.setItem('Task List', JSON.stringify(listArray))
         // console.log('Ohk It works');
-        displayAlert("Task Added", "success")
         showTask()
         refreshPage() //Refresh page upon submit button fired
+        displayAlert("Task Added", "success")
     }
     else if (inputField.value.trim() !== '' && editSet) {
         // console.log('Hello edit will work');
@@ -42,9 +42,9 @@ addTask.addEventListener('submit', function(e){
         // console.log(JSON.parse(localStorage.getItem('Task List')))
         // console.log(JSON.parse(localStorage.getItem('Task List')[index]))
         localStorage.setItem('Task List', JSON.stringify(listArray))
-        displayAlert("Task Edited", "success")
         showTask()
         refreshPage() //Refresh page upon submit button fired
+        displayAlert("Task Edited", "success")
     }
     else{
         // console.log('I am empty');
@@ -95,7 +95,7 @@ function displayAlert(text, color){
     setTimeout(function(){
         alertNote.classList.remove(color)
         alertNote.textContent = ''
-    },3000)
+    },6000)
 }
 
 //Refresh page function
@@ -116,8 +116,8 @@ del.forEach(function(item){
         listArray.splice(index, 1)
         localStorage.setItem('Task List',JSON.stringify(listArray))
         // showTask()
-        displayAlert("Task Deleted", "danger")
         refreshPage() //Refresh the page 
+        displayAlert("Task Deleted", "danger")
     })
 })
 
